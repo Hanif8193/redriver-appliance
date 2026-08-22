@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
             </p>
           </div>
           <h2 className="mt-4 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            The team Winnipeg trusts with its appliances
+            Experienced appliance repair for Winnipeg homes and businesses
           </h2>
           <p className="mt-4 max-w-md text-lg leading-relaxed text-stone-400">
             We've spent a decade earning that trust one repair at a
