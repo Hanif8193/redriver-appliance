@@ -9,7 +9,7 @@ export default function Faq() {
         <SectionHeading
           eyebrow="FAQ"
           title="Frequently asked questions"
-          description="Straight answers about how our service calls work."
+          description="Straight answers about our appliance repair service."
         />
 
         <div className="mt-10 space-y-3">

@@ -9,9 +9,9 @@ export default function Brands() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Brands We Repair"
+          eyebrow="All Major Brands"
           title="Experienced with all major appliance brands"
-          description="Whatever's sitting in your laundry room or kitchen, chances are we've fixed it before."
+          description="Whatever brand you have, chances are we've fixed it before. Our technicians are trained to work on all major appliance manufacturers."
         />
 
         <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-2.5 sm:gap-3">

@@ -22,7 +22,7 @@ export default function TrustBar() {
                 index === 0 ? "lg:pr-6" : "lg:px-6"
               }`}
             >
-              <span className="grid size-12 shrink-0 place-items-center rounded-full bg-white/10 text-white ring-1 ring-inset ring-white/25">
+              <span className="grid size-12 shrink-0 place-items-center rounded-full bg-white/15 text-white ring-1 ring-inset ring-white/30">
                 <Icon className="size-[22px]" aria-hidden="true" />
               </span>
               <div>

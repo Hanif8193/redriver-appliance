@@ -36,7 +36,7 @@ export const business = {
   phoneHref: "tel:+14316688184",
   tagline:
     "Fast, dependable appliance repair for homes and businesses across Winnipeg.",
-  availability: "Available 24/7",
+  availability: "Same-Day Service Available",
 } as const;
 
 export const services: Service[] = [

@@ -14,9 +14,9 @@ export default function Testimonials() {
     <section id="reviews" className="scroll-mt-20 bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Reviews"
+          eyebrow="Customer Reviews"
           title="What our customers say"
-          description="Feedback from customers we've helped get back to normal."
+          description="Feedback from homeowners and businesses we've helped across Winnipeg."
         />
 
         <div className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6">
@@ -31,7 +31,7 @@ export default function Testimonials() {
               />
 
               <div className="relative">
-                <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-stone-700">
+                <blockquote className="flex-1 text-[15px] leading-relaxed text-stone-700">
                   "{testimonial.quote}"
                 </blockquote>
 
@@ -45,7 +45,7 @@ export default function Testimonials() {
                   <span className="text-sm font-bold text-stone-900">
                     {testimonial.name}
                     <span className="block text-xs font-medium normal-case tracking-normal text-stone-500">
-                      Customer review
+                      Customer
                     </span>
                   </span>
                 </figcaption>

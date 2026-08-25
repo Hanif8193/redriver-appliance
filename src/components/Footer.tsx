@@ -12,10 +12,10 @@ const serviceLinks = [
 ] as const;
 
 const companyLinks = [
+  { label: "Residential", href: "#residential" },
+  { label: "Commercial", href: "#commercial" },
   { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Reviews", href: "#reviews" },
+  { label: "Why Red River", href: "#why-us" },
   { label: "FAQ", href: "#faq" },
 ] as const;
 

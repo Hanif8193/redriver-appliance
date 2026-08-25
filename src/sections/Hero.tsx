@@ -1,11 +1,11 @@
-import { Check, Clock, MapPin, Phone } from "lucide-react";
+import { Check, Clock, MapPin, Phone, ShieldCheck, Wrench } from "lucide-react";
 import ButtonLink from "../components/ButtonLink";
 import { business } from "../data/content";
 
 const heroUsps = [
-  "Same-day service",
-  "3-month warranty on replaced parts",
-  "Residential & commercial",
+  { icon: Clock, text: "Same-Day Service" },
+  { icon: Wrench, text: "10+ Years Experience" },
+  { icon: ShieldCheck, text: "3-Month Warranty" },
 ] as const;
 
 export default function Hero() {
@@ -15,20 +15,19 @@ export default function Hero() {
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-stone-600 shadow-sm">
             <MapPin className="size-3.5 shrink-0 text-brand-600" aria-hidden="true" />
-            Residential &amp; Commercial · {business.city}, {business.region}
+            {business.city}, {business.region} — Residential &amp; Commercial
           </p>
 
           <h1 className="mt-6 text-balance text-4xl font-extrabold leading-[1.06] tracking-tight text-stone-900 sm:text-5xl sm:leading-[1.08] xl:text-[3.6rem]">
-            Fast, dependable{" "}
-            <span className="text-brand-700">appliance repair</span> in{" "}
+            Same-Day{" "}
+            <span className="text-brand-700">Appliance Repair</span> in{" "}
             {business.city}
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone-600">
-            Washers, dryers, refrigerators, stoves and dishwashers — repaired
-            on-site by experienced technicians. We service every major brand,
-            offer same-day appointments, and back replaced parts with a
-            3-month warranty.
+            When your appliance breaks down, you need it fixed fast. Our experienced
+            technicians provide same-day service for both homes and businesses — backed
+            by a 3-month warranty on every replaced part.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -50,17 +49,24 @@ export default function Hero() {
           <ul className="mt-8 flex flex-wrap gap-x-3 gap-y-2.5">
             {heroUsps.map((usp) => (
               <li
-                key={usp}
+                key={usp.text}
                 className="flex items-center gap-2 rounded-lg border border-stone-200 bg-white px-3 py-1.5 text-[13px] font-medium text-stone-700"
               >
-                <Check
+                <usp.icon
                   className="size-4 shrink-0 text-brand-600"
                   aria-hidden="true"
                 />
-                {usp}
+                {usp.text}
               </li>
             ))}
           </ul>
+
+          <p className="mt-5 text-sm text-stone-500">
+            All major brands ·{" "}
+            <span className="font-medium text-stone-700">
+              Samsung, Whirlpool, GE, Miele, and more
+            </span>
+          </p>
         </div>
 
         <aside
@@ -76,8 +82,8 @@ export default function Hero() {
             Need it fixed today?
           </p>
           <p className="mt-2.5 text-sm leading-relaxed text-stone-300">
-            Speak with our team about your appliance problem — day or night,
-            we'll help you get it sorted.
+            Speak with our team about your appliance problem — we'll help you
+            get it sorted with same-day service.
           </p>
 
           <a
@@ -91,9 +97,10 @@ export default function Hero() {
 
           <ul className="mt-7 space-y-3 border-t border-white/10 pt-7">
             {[
-              "All major brands repaired",
               "Same-day appointments available",
+              "10+ years of hands-on experience",
               "3-month warranty on replaced parts",
+              "All major brands serviced",
             ].map((item) => (
               <li
                 key={item}

@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 import ServiceCard from "../components/ServiceCard";
-import { services } from "../data/content";
+import { services, business } from "../data/content";
 
 const icons: Record<string, LucideIcon> = {
   "washer-repair": Droplets,
@@ -25,9 +25,9 @@ export default function Services() {
     <section id="services" className="scroll-mt-20 bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Our Services"
-          title="One call fixes every major appliance"
-          description="Residential and commercial repair for the appliances you rely on every day — done on-site by experienced technicians."
+          eyebrow="What We Fix"
+          title="Expert repair for every major appliance"
+          description="From household washers to commercial kitchen equipment, our experienced technicians diagnose and repair it all on-site."
         />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,16 +44,18 @@ export default function Services() {
           })}
         </div>
 
-        <p className="mt-10 text-center text-sm text-stone-600">
-          Not sure what's wrong with your appliance?{" "}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-stone-600">
+            Not sure what's wrong? Our technicians will diagnose the problem and explain
+            your options before any work begins.
+          </p>
           <a
-            href="#contact"
-            className="font-semibold text-brand-700 underline-offset-4 hover:underline"
+            href={business.phoneHref}
+            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
           >
-            Book a diagnostic visit
+            Call us for a diagnostic visit →
           </a>
-          .
-        </p>
+        </div>
       </div>
     </section>
   );

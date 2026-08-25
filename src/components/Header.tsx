@@ -4,10 +4,10 @@ import Logo from "./Logo";
 import { business } from "../data/content";
 
 const navLinks = [
+  { label: "Residential", href: "#residential" },
+  { label: "Commercial", href: "#commercial" },
   { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Reviews", href: "#reviews" },
+  { label: "Why Red River", href: "#why-us" },
   { label: "FAQ", href: "#faq" },
 ] as const;
 
@@ -71,8 +71,8 @@ export default function Header() {
             className="inline-flex items-center gap-2 rounded-lg bg-brand-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-800 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700 sm:px-4"
           >
             <Phone className="size-4 shrink-0" aria-hidden="true" />
-            <span className="hidden sm:inline">{business.phoneDisplay}</span>
-            <span className="sm:hidden">Call</span>
+            <span className="hidden sm:inline">Call Now</span>
+            <span className="sm:hidden">Call Now</span>
           </a>
 
           <button
@@ -113,7 +113,7 @@ export default function Header() {
             className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-brand-700 py-3.5 text-base font-semibold text-white transition-colors hover:bg-brand-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700"
           >
             <Phone className="size-4" aria-hidden="true" />
-            Call {business.phoneDisplay}
+            Call Now — {business.phoneDisplay}
           </a>
         </nav>
       )}

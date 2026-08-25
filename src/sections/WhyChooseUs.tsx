@@ -1,21 +1,42 @@
-import type { LucideIcon } from "lucide-react";
 import {
   Award,
-  CalendarCheck,
+  Clock,
   ShieldCheck,
   Wrench,
-  Zap,
 } from "lucide-react";
 import ButtonLink from "../components/ButtonLink";
-import { business, whyUsPoints } from "../data/content";
+import { business } from "../data/content";
 
-const icons: Record<string, LucideIcon> = {
-  experience: Award,
-  fast: Zap,
-  warranty: ShieldCheck,
-  brands: Wrench,
-  convenience: CalendarCheck,
-};
+const differentiators = [
+  {
+    id: "same-day",
+    icon: Clock,
+    title: "Same-Day Service",
+    description:
+      "When an appliance breaks down, waiting days isn't an option. We offer same-day appointments so you can get back to your routine quickly.",
+  },
+  {
+    id: "experience",
+    icon: Award,
+    title: "10+ Years Experience",
+    description:
+      "A decade of hands-on experience repairing household and commercial appliances across Winnipeg. We've seen and fixed it all.",
+  },
+  {
+    id: "warranty",
+    icon: ShieldCheck,
+    title: "3-Month Warranty",
+    description:
+      "Every replaced part carries a three-month warranty, so you can book with confidence knowing the fix holds up.",
+  },
+  {
+    id: "brands",
+    icon: Wrench,
+    title: "All Major Brands",
+    description:
+      "From Whirlpool and GE to Miele and KitchenAid — we repair appliances from any manufacturer, residential or commercial.",
+  },
+] as const;
 
 export default function WhyChooseUs() {
   return (
@@ -25,16 +46,16 @@ export default function WhyChooseUs() {
           <div className="flex items-center gap-3">
             <span aria-hidden="true" className="h-1 w-10 rounded-full bg-brand-600" />
             <p className="text-xs font-bold uppercase tracking-widest text-stone-400">
-              Why Choose Red River
+              Why Red River
             </p>
           </div>
           <h2 className="mt-4 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Experienced appliance repair for Winnipeg homes and businesses
+            Winnipeg's trusted appliance repair team
           </h2>
           <p className="mt-4 max-w-md text-lg leading-relaxed text-stone-400">
-            We've spent a decade earning that trust one repair at a
-            time — with professional diagnostics, quality parts and service
-            that respects your schedule.
+            We've spent a decade earning trust one repair at a time — with
+            professional diagnostics, quality parts and service that respects
+            your schedule.
           </p>
 
           <div className="mt-8 rounded-lg border border-brand-500/30 bg-brand-600/15 p-5">
@@ -65,19 +86,19 @@ export default function WhyChooseUs() {
         </div>
 
         <ul className="divide-y divide-white/10 border-y border-white/10">
-          {whyUsPoints.map((point) => {
-            const Icon = icons[point.id] ?? ShieldCheck;
+          {differentiators.map((item) => {
+            const Icon = item.icon;
             return (
-              <li key={point.id} className="flex gap-5 py-6 first:border-t-0">
+              <li key={item.id} className="flex gap-5 py-6 first:border-t-0">
                 <span className="grid size-11 shrink-0 place-items-center rounded-lg bg-white/10 text-brand-300 ring-1 ring-inset ring-white/10">
                   <Icon className="size-5" aria-hidden="true" />
                 </span>
                 <div>
                   <h3 className="text-base font-bold tracking-tight text-white">
-                    {point.title}
+                    {item.title}
                   </h3>
                   <p className="mt-1.5 max-w-lg text-sm leading-relaxed text-stone-400">
-                    {point.description}
+                    {item.description}
                   </p>
                 </div>
               </li>

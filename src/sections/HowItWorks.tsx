@@ -40,7 +40,7 @@ export default function HowItWorks() {
                   </span>
                   <span
                     aria-hidden="true"
-                    className="absolute -right-1.5 -top-1.5 z-20 grid size-6 place-items-center rounded-full text-[11px] font-bold text-white ring-2 ring-stone-50"
+                    className="absolute -right-1.5 -top-1.5 z-20 grid size-6 place-items-center rounded-full bg-brand-700 text-[11px] font-bold text-white ring-2 ring-stone-50"
                   >
                     {index + 1}
                   </span>

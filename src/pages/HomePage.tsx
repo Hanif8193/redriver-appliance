@@ -1,10 +1,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import MobileCta from "../components/MobileCta";
 import Hero from "../sections/Hero";
 import TrustBar from "../sections/TrustBar";
+import ResidentialCommercial from "../sections/ResidentialCommercial";
 import Services from "../sections/Services";
-import WhyChooseUs from "../sections/WhyChooseUs";
 import HowItWorks from "../sections/HowItWorks";
+import WhyChooseUs from "../sections/WhyChooseUs";
+import CommercialConversion from "../sections/CommercialConversion";
+import ResidentialConversion from "../sections/ResidentialConversion";
 import Testimonials from "../sections/Testimonials";
 import Brands from "../sections/Brands";
 import Faq from "../sections/Faq";
@@ -23,15 +27,19 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <TrustBar />
+        <ResidentialCommercial />
         <Services />
-        <WhyChooseUs />
         <HowItWorks />
+        <WhyChooseUs />
+        <CommercialConversion />
+        <ResidentialConversion />
         <Testimonials />
         <Brands />
         <Faq />
         <FinalCta />
       </main>
       <Footer />
+      <MobileCta />
     </>
   );
 }
